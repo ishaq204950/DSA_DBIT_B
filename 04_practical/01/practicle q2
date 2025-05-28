@@ -1,0 +1,24 @@
+#Implement a stack using a list. Include push, pop, peek, and is_empty methods.
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        """Push an item onto the stack."""
+        self.items.append(item)
+
+    def pop(self):
+        """Pop an item off the stack and return it. Raise an exception if the stack is empty."""
+        if self.is_empty():
+            raise IndexError("pop from empty stack")
+        return self.items.pop()
+
+    def peek(self):
+        """Return the top item of the stack without removing it. Raise an exception if the stack is empty."""
+        if self.is_empty():
+            raise IndexError("peek from empty stack")
+        return self.items[-1]
+
+    def is_empty(self):
+        """Check if the stack is empty."""
+        return len(self.items) == 0
