@@ -1,12 +1,14 @@
-# Creating a list
 numbers = [1, 2, 3, 4, 5]
 
-# Accessing an element
 print(numbers[0])
 
-# Modifying an element
 numbers[2] = 10
 print(numbers[2])
 
 print(numbers)
-     
+
+def reverse_list(lst):
+    return lst[::-1]
+
+reversed_numbers = reverse_list(numbers)
+print("Reversed list:", reversed_numbers)
